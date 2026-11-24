@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Người dùng chỉ được ĐỌC profile của chính mình.
+    // Mọi thao tác GHI (users, invites, orders, system_config, channels...)
+    // đều đi qua API server bằng Admin SDK (bỏ qua rules này).
+    match /users/{uid} {
+      allow get: if request.auth != null && request.auth.uid == uid;
+      allow list: if false;
+      allow create, update, delete: if false;
+    }
+
+    // extension_tokens: trình duyệt KHÔNG được đọc/ghi trực tiếp (chỉ qua API server).
+    match /extension_tokens/{doc} {
+      allow read, write: if false;
+    }
+
+    // Mọi collection còn lại: trình duyệt KHÔNG được đọc/ghi trực tiếp.
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}

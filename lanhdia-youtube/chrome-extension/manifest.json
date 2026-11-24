@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "LÃNH ĐỊA YOUTUBE · Đồng bộ kênh",
+  "version": "2.0.0",
+  "description": "Đồng bộ kênh từ YouTube Studio và mở đúng hồ sơ Chrome đã ghép trên Windows.",
+  "incognito": "not_allowed",
+  "minimum_chrome_version": "115",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "nativeMessaging"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+Y"
+      }
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_title": "Đồng bộ kênh với LÃNH ĐỊA YOUTUBE",
+    "default_icon": "icon.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzYYNUjglW0Sm0BUXZxlm66sDGGmWT4qwtAHjYYJSh9CUoSbSD92ZgVDAn0JgUNYAgBka4Cn1VOqvZdxXAvKMqYuITPUvWKQO3/KDeJkcNY/2+b8ReDx577hI8yH72qmP+b/AbFb24g1n+mTPxTzuP5e0j4jdKLNYYCfllG4eLs2Sj4GhkpDt2wR7Yn76/p6kLnRbPtwYoTCVl3x1Zqwadv4gfO761CyNSWssIhQNlx9F9VCv8jDGBb36fOlTSDHGaRUHRgoFVRCTRdEJuFAJAWiyjxgtkHBS5zP+ocfFD+6L3aRpFVqqbV87UEnwjtBf0KNFnJcwRQ2Jnh5a9yAqWQIDAQAB",
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://lanhdiayoutube2027-beryl.vercel.app/*"
+    ]
+  }
+}

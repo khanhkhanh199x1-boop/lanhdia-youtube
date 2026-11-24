@@ -1,0 +1,26 @@
+LÃNH ĐỊA YOUTUBE · WINDOWS HELPER 2
+
+1. Giải nén ZIP, mở cai-dat-helper.bat bằng tài khoản Windows thường.
+   Cần Chrome Stable và .NET Framework 4.x trên Windows 10/11. Không cần Administrator.
+   Bộ cài biên dịch mã nguồn Host.cs/BuildInfo.cs tại máy rồi đăng ký Native Messaging
+   trong HKCU chỉ cho tiện ích chính thức. Không tải phần mềm khác hay đổi Execution Policy.
+2. Cài tiện ích Chrome v2 trong hồ sơ trung tâm và từng hồ sơ YouTube muốn ghép.
+   Vào LÃNH ĐỊA YOUTUBE → Quản lý Kênh → Thiết lập hồ sơ trên máy này.
+   Xem mục Profile Path trong chrome://version. Chọn phần cuối (Default/Profile N).
+   Helper mở tab xác minh ở hồ sơ đã chọn; chỉ ghép khi đúng tiện ích của hồ sơ gốc.
+3. Trên web trong hồ sơ trung tâm, bấm Chọn làm trung tâm. Chỉ cần đăng nhập web ở đây.
+4. Trong mỗi hồ sơ YouTube, mở YouTube Studio của kênh rồi bấm biểu tượng tiện ích.
+   Ghép hồ sơ nếu đây là lần đầu. Những lần sau bấm một cái; web tự lưu theo ID kênh.
+5. Bấm Mở Studio trong danh sách trên web. Nếu không còn đúng hồ sơ, Helper báo lỗi,
+   không sử dụng Chrome mặc định và không khởi chạy lệnh bất kỳ.
+
+Cấu hình cục bộ: %LOCALAPPDATA%\LanhDiaYouTube\ChromeHub. Dấu ghép không bí mật
+LanhDiaYouTube.ChromeHub.link trong hồ sơ nhận diện việc xóa/tạo lại thư mục cũ.
+Không đọc cookie, token, mật khẩu, lịch sử hoặc dữ liệu Studio. Không mở cổng mạng,
+không chạy lúc khởi động máy, không tải video hay thay đổi cài đặt YouTube. Tiện ích
+không đọc tên Gmail. Phiên Studio còn hiệu lực do YouTube kiểm tra khi mở.
+
+Chỉ hỗ trợ thư mục Chrome chuẩn cùng một tài khoản Windows. Hồ sơ Guest/ẩn danh,
+Chrome Portable và hồ sơ do phần mềm bên thứ ba quản lý không được hỗ trợ.
+Gỡ: chạy go-helper.bat, gỡ tiện ích trong từng hồ sơ; bản ghi trên web giữ nguyên.
+Không ghi đè lên Helper thư mục/video cũ nếu bạn đang dùng nó.

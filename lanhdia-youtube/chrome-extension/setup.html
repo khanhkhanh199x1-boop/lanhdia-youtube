@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ghép hồ sơ Chrome · Lãnh Địa YouTube</title><link rel="stylesheet" href="setup.css"><script src="setup.js" defer></script></head>
+<body><main>
+  <header><span class="brand" aria-hidden="true">▶</span><div><p class="eyebrow">LÃNH ĐỊA YOUTUBE · CHROME HUB</p><h1>Ghép hồ sơ Chrome</h1></div></header>
+  <p class="pill" id="profile">Đang kiểm tra Windows Helper…</p>
+  <p role="status" id="status">Đang đọc kết nối cục bộ.</p>
+  <form id="pair" hidden>
+    <h2>Xác minh đúng hồ sơ đang mở</h2>
+    <p>Trong trang <button class="text" id="chrome-version" type="button">chrome://version</button>, tìm dòng <b>Profile Path</b> (Đường dẫn hồ sơ). Chọn phần cuối của đường dẫn, ví dụ <b>Profile 48</b>.</p>
+    <label for="directory">Thư mục hồ sơ</label>
+    <select id="directory" required></select>
+    <p id="note">Tab xác minh sẽ tự kiểm tra hồ sơ. Không đọc cookie hay tài khoản Google.</p>
+    <button class="primary" id="verify" type="submit">Mở tab xác minh</button>
+  </form>
+  <section id="capture" hidden><h2>Kênh vừa nhận diện</h2><code id="channel-id"></code><button class="primary" type="button" id="sync" disabled>Đồng bộ kênh này</button></section>
+  <nav><a id="site">Về Quản lý Kênh</a><a id="download">Tải Windows Helper</a><button class="text" id="check" type="button">Kiểm tra lại</button></nav>
+  <footer>Chỉ ghép hồ sơ Chrome chuẩn trên máy Windows này. Từ lần sau, mở <b>YouTube Studio</b> → bấm biểu tượng tiện ích để gửi kênh về web.</footer>
+</main></body></html>

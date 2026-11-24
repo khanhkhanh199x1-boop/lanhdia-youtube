@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Lãnh Địa YouTube - Lấy Kênh 1 Chạm",
+  "version": "1.0.0",
+  "description": "Lấy thông tin kênh YouTube Studio và đồng bộ 1 chạm về bảng Quản lý Kênh của Lãnh Địa YouTube.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://studio.youtube.com/*",
+    "https://www.youtube.com/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_title": "Lấy kênh 1 chạm",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
